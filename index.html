@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Artiscan3D - 3D Laser Scanning for the Arts</title>
-            <link rel="stylesheet" href="./index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artiscan3D - 3D Laser Scanning for the Arts</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -21,17 +23,17 @@
     </header>
 
     <!-- Hero Section -->
-    <div class="hero">
-        <h2>Bringing Art to Life in 3D Precision</h2>
+    <section class="hero">
+        <h2>Bringing Ideas to Life in 3D Precision</h2>
         <p>Your Partner in Film, Jewellery, Gaming, and Model-Making</p>
-        <button class="btn">Explore Our Work</button>
-        <button class="btn">Get in touch for a Quote</button>
-    </div>
+        <a href="#portfolio" class="btn">Explore Our Work</a>
+        <a href="#contact" class="btn">Contact Us</a>
+    </section>
 
     <!-- About Section -->
     <section id="about">
         <h3>About Us</h3>
-        <p>At Artiscan3D, we specialise in high-resolution 3D laser scanning, partnering with creative industries to bring art to life with precision and detail.</p>
+        <p>At Artiscan3D, we specialise in high-resolution 3D laser scanning and printing, partnering with creative industries to bring art to life with precision and detail.</p>
     </section>
 
     <!-- Services Section -->
@@ -39,19 +41,19 @@
         <h3>Our Services</h3>
         <div class="services">
             <div class="service">
-                <h4>Film & Media Scanning</h4>
+                <h4>Film & Media Scanning and VFX</h4>
                 <p>High-resolution scans for props, characters, and more.</p>
             </div>
             <div class="service">
-                <h4>Jewellery Scanning</h4>
+                <h4>Jewellery and Creative Arts scanning and CAD</h4>
                 <p>Capture intricate details for design and manufacturing.</p>
             </div>
             <div class="service">
-                <h4>Game Asset Scanning</h4>
+                <h4>Game Assets scanning</h4>
                 <p>Optimised scans for immersive game development.</p>
             </div>
             <div class="service">
-                <h4>Model & Miniature Scanning</h4>
+                <h4>Model & Miniature scanning</h4>
                 <p>Precise replicas and digital archives for any project.</p>
             </div>
         </div>
@@ -61,54 +63,116 @@
     <section id="industries" class="industries">
         <h3>Industries We Serve</h3>
         <div class="industries">
-            <div class="industry">
-                <h4>Film and Media</h4>
-            </div>
-            <div class="industry">
-                <h4>Jewellery</h4>
-            </div>
-            <div class="industry">
-                <h4>Gaming</h4>
-            </div>
-            <div class="industry">
-                <h4>Model Making</h4>
-            </div>
-            <div class="industry">
-                <h4>Fine Arts</h4>
-            </div>
+            <div class="industry"><h4>Film and Media</h4></div>
+            <div class="industry"><h4>Jewellery and Creative Arts</h4></div>
+            <div class="industry"><h4>Gaming</h4></div>
+            <div class="industry"><h4>Model Making</h4></div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio">
         <h3>Our Work</h3>
-        <div class="portfolio">
-            <div class="portfolio-item">Project 1</div>
-            <div class="portfolio-item">Project 2</div>
-            <div class="portfolio-item">Project 3</div>
+
+        <!-- Film and Media Portfolio -->
+        <div class="portfolio-category">
+            <h4>Film and Media</h4>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <div class="portfolio-item-content">
+                        <div class="portfolio-thumbnail">
+                            <img src="assets/img/dean.gif" alt="Project Thumbnail">
+                        </div>
+                        <div class="portfolio-details">
+                            <h4 class="portfolio-title">Crazy Disco Time</h4>
+                            <p class="portfolio-description">** Short brief description. **</p>
+                            <a href="link-to-project-details.html" class="btn view-more">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">Film Project 2</div>
+                <div class="portfolio-item">Film Project 3</div>
+            </div>
+        </div>
+
+        <!-- Jewellery Portfolio -->
+        <div class="portfolio-category">
+            <h4>Jewellery and Creative Arts</h4>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <div class="portfolio-item-content">
+                        <div class="portfolio-thumbnail">
+                            <img src="assets/img/ring.png" alt="Project Thumbnail">
+                        </div>
+                        <div class="portfolio-details">
+                            <h4 class="portfolio-title">Bubble Ring</h4>
+                            <p class="portfolio-description">** Long description **. This unique ring is crafted from delicate, shimmering bubbles, each one encased in a smooth, translucent setting that captures the light with every movement. The bubbles appear to float around the band, giving the piece an ethereal and playful quality. The design mimics the soft, fleeting nature of bubbles, with a subtle iridescence that shifts in colour as the ring is worn. The band itself is lightweight yet sturdy, ensuring comfort while maintaining the illusion of fragility. This ring is a perfect blend of whimsy and elegance, ideal for those who appreciate artistry and nature-inspired designs. </p>
+                            <a href="link-to-project-details.html" class="btn view-more">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">Jewellery Project 2</div>
+                <div class="portfolio-item">Jewellery Project 3</div>
+            </div>
+        </div>
+
+        <!-- Gaming Portfolio -->
+        <div class="portfolio-category">
+            <h4>Gaming</h4>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <div class="portfolio-item-content">
+                        <div id="portfolio-thumbnail">
+                            <model-viewer alt="Clown Fish" src="assets/models/fish.glb" shadow-intensity="1" camera-controls touch-action="pan-y" autoplay></model-viewer>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4 class="portfolio-title">Fish Fish Fish!</h4>
+                            <p class="portfolio-description">Loads of fish. Fish everywhere! Clownfish, Great White Shark, Anglerfish, Blue Tang, Betta Fish, Salmon, Goldfish, Piranha, Mahi-mahi, Swordfish, Neon Tetra, Tilapia, Snapper, Barracuda, Angelfish, Rainbow Trout, Goby, Triggerfish, Carp, Grouper. </p>
+                            <a href="link-to-project-details.html" class="btn view-more">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">Game Project 3</div>
+            </div>
+        </div>
+
+        <!-- Model Making Portfolio -->
+        <div class="portfolio-category">
+            <h4>Prototyping and Product Development</h4>
+            <div class="portfolio">
+                <div class="portfolio-item">Model Project 1</div>
+                <div class="portfolio-item">Model Project 2</div>
+                <div class="portfolio-item">Model Project 3</div>
+            </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials">
         <h3>What Our Clients Say</h3>
         <p>"Artiscan3D brought our vision to life with incredible precision!"</p>
     </section>
 
     <!-- Blog Section -->
-    <section id="blog" class="blog">
+    <section id="blog">
         <h3>Insights from Artiscan3D</h3>
         <p>Latest insights, tips, and case studies from our blog.</p>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h3>Let’s Start Creating Together</h3>
-        <form action="#">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Submit</button>
+    <section class="contact">
+        <h3>Contact Us</h3>
+        <form>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+            <button type="submit">Send Message</button>
         </form>
     </section>
 

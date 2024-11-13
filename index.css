@@ -4,11 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #333;
     line-height: 1.6;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -23,21 +25,26 @@ header {
     background: #222;
     color: #fff;
 }
+
 header h1 {
-    font-size: 1.8em;
-    color: #1fa2ff;
+    font-size: 1.6em;
+    margin: 0 12px;
+    margin-bottom: 10px;
+    color: #4b6ff6;
 }
+
 nav a {
     margin: 0 15px;
     color: #fff;
 }
+
 nav a:hover {
-    color: #1fa2ff;
+    color: #4b6ff6;
 }
 
 /* Hero Section */
 .hero {
-    background: url('./img/hero.jpg') no-repeat center center/cover;
+    background: url('assets/img/hero.jpg') no-repeat center center/cover;
     color: #fff;
     height: 80vh;
     display: flex;
@@ -46,21 +53,28 @@ nav a:hover {
     justify-content: center;
     text-align: center;
 }
+
 .hero h2 {
     font-size: 2.5em;
+    padding: 12px;
     margin-bottom: 10px;
 }
+
 .hero p {
     font-size: 1.2em;
+    padding: 16px;
     margin-bottom: 20px;
 }
+
 .btn {
-    background: #1fa2ff;
+    background: #875be7;
     padding: 10px 20px;
     color: #fff;
     border: none;
     cursor: pointer;
+    margin: 5px;
 }
+
 .btn:hover {
     background: #1480cc;
 }
@@ -70,16 +84,19 @@ section {
     padding: 60px 20px;
     text-align: center;
 }
+
 section h3 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #1fa2ff;
+    color: #4b6ff6;
 }
+
 .services, .industries, .portfolio {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .service, .industry, .portfolio-item {
     flex: 1;
     min-width: 200px;
@@ -89,9 +106,59 @@ section h3 {
     border-radius: 8px;
     transition: transform 0.3s;
 }
+
 .service:hover, .industry:hover, .portfolio-item:hover {
     transform: scale(1.05);
 }
+
+/* Portfolio Item Specifics */
+/* Ensure portfolio items are contained */
+.portfolio-item {
+    position: relative; /* Prevents elements from overflowing */
+    max-width: 100%; /* Ensures it doesn't stretch beyond container width */
+    overflow: hidden; /* Hides anything outside the container */
+    background: #f7f7f7;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+/* Portfolio thumbnail image/container */
+.portfolio-thumbnail img {
+    width: 100%; /* Ensures the image fits the width of the container */
+    height: auto; /* Maintains aspect ratio of the image */
+    object-fit: cover; /* Ensures the image covers the container without distorting */
+    border-radius: 8px; /* Keeps consistent border-radius */
+}
+
+.portfolio-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Portfolio Details */
+.portfolio-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 4px;
+}
+
 .testimonials, .blog {
     background: #f1f1f1;
 }
@@ -102,23 +169,41 @@ section h3 {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 15px; /* Added gap between form elements */
 }
+
 .contact input, .contact textarea {
     padding: 10px;
-    margin: 10px 0;
+    margin: 0; /* Removed margin for consistency */
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1rem;
+    width: 100%; /* Ensure they fill the form container */
+    box-sizing: border-box; /* Prevent width from being affected by padding */
 }
+
+.contact textarea {
+    min-height: 120px; /* Set a consistent height for textareas */
+    resize: vertical; /* Allow resizing vertically */
+}
+
 .contact button {
     padding: 10px;
-    background: #1fa2ff;
+    background: #4b6ff6;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1rem;
 }
+
 .contact button:hover {
     background: #1480cc;
+}
+
+/* Optional: Add focus states to improve accessibility */
+.contact input:focus, .contact textarea:focus {
+    outline: 2px solid #4b6ff6;
 }
 
 /* Footer */
@@ -128,13 +213,18 @@ footer {
     padding: 20px;
     text-align: center;
 }
+
 footer a {
-    color: #1fa2ff;
+    color: #4b6ff6;
+}
+
+/* Button hover effect */
+.btn.view-more:hover {
+    background: #1480cc;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Stack navigation vertically on smaller screens */
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -147,6 +237,21 @@ footer a {
 
     header h1 {
         font-size: 1.25rem;
+    }
+
+    .portfolio-item-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .portfolio-thumbnail {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .portfolio-item {
+        flex: 1 1 100%;
     }
 }
 
