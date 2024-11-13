@@ -1,0 +1,3 @@
+# MIME types for 3D model files
+AddType model/gltf-binary .glb
+AddType model/gltf+json .gltf
