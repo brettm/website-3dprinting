@@ -107,12 +107,33 @@ section h3 {
     transition: transform 0.3s;
 }
 
+.industry {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.industry-icon img {
+    width: 100px;
+    height: auto;
+/*    padding: 20px;*/
+/*    padding-bottom: 0px;*/
+}
+
 .service:hover, .industry:hover, .portfolio-item:hover {
     transform: scale(1.05);
 }
 
 /* Portfolio Item Specifics */
 /* Ensure portfolio items are contained */
+.portfolio-category-title {
+    h4 {
+        font-size: 1.6em;
+        padding: 20px;
+    }
+}
+
 .portfolio-item {
     position: relative; /* Prevents elements from overflowing */
     max-width: 100%; /* Ensures it doesn't stretch beyond container width */
@@ -146,7 +167,6 @@ section h3 {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
 
 /* Portfolio Details */
 .portfolio-details {
@@ -205,6 +225,22 @@ section h3 {
 .contact input:focus, .contact textarea:focus {
     outline: 2px solid #4b6ff6;
 }
+
+.about-content {
+    
+}
+
+.company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.company-logo {
+    height: auto;
+}
+
+
 
 /* Footer */
 footer {

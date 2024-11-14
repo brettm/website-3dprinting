@@ -25,15 +25,22 @@
     <!-- Hero Section -->
     <section class="hero">
         <h2>Bringing Ideas to Life in 3D Precision</h2>
-        <p>Your Partner in Film, Jewellery, Gaming, and Model-Making</p>
+        <p>Your Partner in Film, Gaming, and Product Design.</p>
         <a href="#portfolio" class="btn">Explore Our Work</a>
         <a href="#contact" class="btn">Contact Us</a>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h3>About Us</h3>
-        <p>At Artiscan3D, we specialise in high-resolution 3D laser scanning and printing, partnering with creative industries to bring art to life with precision and detail.</p>
+        <div class="about-content">
+            <div class="company-details">
+                <h3>About Us</h3>
+                <div class="company-logo">
+                    <img src="./assets/img/sv_logo_thumb.png" alt="Company Logo">
+                </div>
+                <p>At Artiscan3D, we specialise in high-resolution 3D laser scanning and printing, partnering with creative industries to bring art to life with precision and detail.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Services Section -->
@@ -45,15 +52,15 @@
                 <p>High-resolution scans for props, characters, and more.</p>
             </div>
             <div class="service">
-                <h4>Jewellery and Creative Arts scanning and CAD</h4>
-                <p>Capture intricate details for design and manufacturing.</p>
-            </div>
-            <div class="service">
-                <h4>Game Assets scanning</h4>
+                <h4>Game Assets</h4>
                 <p>Optimised scans for immersive game development.</p>
             </div>
             <div class="service">
-                <h4>Model & Miniature scanning</h4>
+                <h4>Jewellery and Model Making</h4>
+                <p>Capture intricate details for design and manufacturing.</p>
+            </div>
+            <div class="service">
+                <h4>Product Design and Fast Prototyping</h4>
                 <p>Precise replicas and digital archives for any project.</p>
             </div>
         </div>
@@ -63,10 +70,30 @@
     <section id="industries" class="industries">
         <h3>Industries We Serve</h3>
         <div class="industries">
-            <div class="industry"><h4>Film and Media</h4></div>
-            <div class="industry"><h4>Jewellery and Creative Arts</h4></div>
-            <div class="industry"><h4>Gaming</h4></div>
-            <div class="industry"><h4>Model Making</h4></div>
+            <div class="industry">
+                <h4>Film and Media</h4>
+                <div class="industry-icon">
+                    <img src="./assets/img/film_icon.png" alt="Film Industry Icon">
+                </div>
+            </div>
+            <div class="industry">
+                <h4>Jewellery and Model Making</h4>
+                <div class="industry-icon">
+                    <img src="./assets/img/jewellery_icon.png" alt="Film Industry Icon">
+                </div>
+            </div>
+            <div class="industry">
+                <h4>Gaming</h4>
+                <div class="industry-icon">
+                    <img src="./assets/img/gaming_icon.png" alt="Film Industry Icon">
+                </div>
+            </div>
+            <div class="industry">
+                <h4>Product Design</h4>
+                <div class="industry-icon">
+                    <img src="./assets/img/prototype_icon.png" alt="Prototype Icon">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -76,7 +103,9 @@
 
         <!-- Film and Media Portfolio -->
         <div class="portfolio-category">
-            <h4>Film and Media</h4>
+            <div class="portfolio-category-title">
+                <h4>Film and Media</h4>
+            </div>
             <div class="portfolio">
                 <div class="portfolio-item">
                     <div class="portfolio-item-content">
@@ -97,7 +126,9 @@
 
         <!-- Jewellery Portfolio -->
         <div class="portfolio-category">
-            <h4>Jewellery and Creative Arts</h4>
+            <div class="portfolio-category-title">
+                <h4>Jewellery and Model Making</h4>
+            </div>
             <div class="portfolio">
                 <div class="portfolio-item">
                     <div class="portfolio-item-content">
@@ -106,19 +137,32 @@
                         </div>
                         <div class="portfolio-details">
                             <h4 class="portfolio-title">Bubble Ring</h4>
-                            <p class="portfolio-description">** Long description **. This unique ring is crafted from delicate, shimmering bubbles, each one encased in a smooth, translucent setting that captures the light with every movement. The bubbles appear to float around the band, giving the piece an ethereal and playful quality. The design mimics the soft, fleeting nature of bubbles, with a subtle iridescence that shifts in colour as the ring is worn. The band itself is lightweight yet sturdy, ensuring comfort while maintaining the illusion of fragility.</p>
+                            <p class="portfolio-description">A Long description. This unique ring is crafted from delicate, shimmering bubbles, each one encased in a smooth, translucent setting that captures the light with every movement. The bubbles appear to float around the band, giving the piece an ethereal and playful quality. The design mimics the soft, fleeting nature of bubbles, with a subtle iridescence that shifts in colour as the ring is worn.</p>
                             <a href="link-to-project-details.html" class="btn view-more">View More</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">Jewellery Project 2</div>
-                <div class="portfolio-item">Jewellery Project 3</div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-content">
+                        <div id="portfolio-thumbnail">
+                            <model-viewer alt="Neil Armstrong" src="./assets/models/NeilArmstrong.glb" shadow-intensity="1" camera-controls touch-action="pan-y" autoplay></model-viewer>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4 class="portfolio-title">Spaceman</h4>
+                            <p class="portfolio-description">Say hello to Neil. Neil likes space and going to the moon. He also likes bread.</p>
+                            <a href="link-to-project-details.html" class="btn view-more">View More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Gaming Portfolio -->
         <div class="portfolio-category">
-            <h4>Gaming</h4>
+            <div class="portfolio-category-title">
+                <h4>Gaming</h4>
+            </div>
             <div class="portfolio">
                 <div class="portfolio-item">
                     <div class="portfolio-item-content">
@@ -138,7 +182,9 @@
 
         <!-- Model Making Portfolio -->
         <div class="portfolio-category">
-            <h4>Prototyping and Product Development</h4>
+            <div class="portfolio-category-title">
+                <h4>Product Design and Prototyping</h4>
+            </div>
             <div class="portfolio">
                 <div class="portfolio-item">Model Project 1</div>
                 <div class="portfolio-item">
@@ -153,7 +199,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item">Model Project 3</div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-content">
+                        <div id="portfolio-thumbnail">
+                            <model-viewer alt="Clown Fish" src="./assets/models/voronoi.glb" shadow-intensity="1" camera-controls touch-action="pan-y" autoplay></model-viewer>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4 class="portfolio-title">Organic Materials</h4>
+                            <p class="portfolio-description">3D printing and additive material manufacturing reinforced by organic forms.</p>
+                            <a href="link-to-project-details.html" class="btn view-more">View More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
